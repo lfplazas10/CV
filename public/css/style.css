@@ -440,8 +440,11 @@ body {
 }
 
 #slide-4 {
-	background-color: #34495e;
-	color: #e4e6e5;
+	background: #E0EAFC;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);
+	background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+
+	color: black;
 	padding-top: 90px;
 }
 
