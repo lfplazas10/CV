@@ -1,0 +1,13 @@
+.home-integrations-waterfall {
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+    0%   {left:0px; top:0px;}
+    25%  {left:500px; top:0px;}
+    50%  {left:1000px; top:0px;}
+    75%  {left:10px; top:0px;}
+    100% {left:0px; top:0px;}
+}

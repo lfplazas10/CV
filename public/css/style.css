@@ -302,7 +302,9 @@ body {
 }
 
 #slide-2 {
-	background-color: #1abc9c;
+	background: #000000; /* Fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #000000, #434343);
+	background: linear-gradient(to right, #000000, #434343);
 	color: #e4e6e5;
 	padding-top: 90px;
 }
