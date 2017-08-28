@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c944a99a-8fc9-4a65-867a-a0dcf4901962" name="Default" comment="" />
+    <list default="true" id="c944a99a-8fc9-4a65-867a-a0dcf4901962" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,8 +28,8 @@
       <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="161">
+              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -127,12 +130,6 @@
               <item name="personal_page" type="b2602c69:ProjectViewProjectNode" />
               <item name="personal_page" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="personal_page" type="b2602c69:ProjectViewProjectNode" />
-              <item name="personal_page" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="personal_page" type="b2602c69:ProjectViewProjectNode" />
@@ -266,6 +263,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c944a99a-8fc9-4a65-867a-a0dcf4901962" name="Default" comment="" />
@@ -275,12 +275,12 @@
       <updated>1503883967310</updated>
       <workItem from="1503883981976" duration="81000" />
       <workItem from="1503884089604" duration="132000" />
-      <workItem from="1503884231936" duration="286000" />
+      <workItem from="1503884231936" duration="1829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="499000" />
+    <option name="totallyTimeSpent" value="2042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1273" height="773" extended-state="0" />
@@ -380,8 +380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="161">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding />
         </state>
       </provider>
