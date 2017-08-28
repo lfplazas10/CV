@@ -1,6 +1,6 @@
 # Personal page
 
-This project can be seen live at: [https://luisplazas.herokuapp.com/]
+This project can be seen live at: [http://luisplazas.co/]
 
 ## Credits
 
