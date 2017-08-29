@@ -1,5 +1,5 @@
 .waterfall-kiwi {  text-align: left;
-    top: 4px;
+    top: 5px;
     left: -250px;
     position: relative;
     animation-name: side-movement-kiwi;
@@ -9,8 +9,8 @@
     animation-iteration-count: infinite;
 }
 @keyframes side-movement-kiwi {
-    0%   {left:-150px; top:30px;}
-    100% {left: 110%; top:30px}
+    0%   {left:-150px; top:5px;}
+    100% {left: 110%; top:5px}
 }
 
 .waterfall-uniandes {

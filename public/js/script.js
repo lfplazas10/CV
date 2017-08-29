@@ -2,10 +2,6 @@ $(document).ready(function (e) {
 
     // NEW FUNCTIONS
 
-    $('#kiwi-image').click(function () {
-        console.log('aqui')
-    })
-
     // /NEW FUNCTIONS
 
     $('.with-hover-text, .regular-link').click(function (e) {
@@ -83,42 +79,6 @@ $(document).ready(function (e) {
         });
         $(document).scroll();
     });
-});
-
-/******************
- * = Gallery width *
- ******************/
-$(function () {
-    var pause = 50; // will only process code within delay(function() { ... }) every 100ms.
-    $(window).resize(function () {
-        delay(function () {
-                var gallery_images = $('#slide-3 img');
-
-                var images_per_row = 0;
-                if (gallery_images.length % 2 == 0) {
-                    images_per_row = gallery_images.length / 2;
-                } else {
-                    images_per_row = gallery_images.length / 2 + 1;
-                }
-
-                var gallery_width = $('#slide-3 img').width() * $('#slide-3 img').length;
-                gallery_width /= 2;
-                if ($('#slide-3 img').length % 2 != 0) {
-                    gallery_width += $('#slide-3 img').width();
-                }
-
-                $('#slide-3 .row').css('width', gallery_width);
-
-                var left_pos = $('#slide-3 .row').width() - $('body').width();
-                left_pos /= -2;
-
-                $('#slide-3 .row').css('left', left_pos);
-
-            },
-            pause
-        );
-    });
-    $(window).resize();
 });
 
 var delay = (function () {
@@ -207,10 +167,38 @@ jQuery(document).ready(function ($) {
         $(".nav-collapse").collapse('hide');
     });
 
+    $('#kiwi-image').click(function (e) {
+        e.preventDefault();
+        dataslide = parseInt(4);
+        goToByScroll(dataslide);
+        $(".nav-collapse").collapse('hide');
+    })
+
+    $('#uniandes-image').click(function (e) {
+        e.preventDefault();
+        dataslide = parseInt(2);
+        goToByScroll(dataslide);
+        $(".nav-collapse").collapse('hide');
+    })
+
+    $('#tennis-image').click(function (e) {
+        e.preventDefault();
+        dataslide = parseInt(2);
+        goToByScroll(dataslide);
+        $(".nav-collapse").collapse('hide');
+    })
+
+    $('#java-image').click(function (e) {
+        e.preventDefault();
+        dataslide = parseInt(4);
+        goToByScroll(dataslide);
+        $(".nav-collapse").collapse('hide');
+    })
+
     //When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
     $('.navigation-slide').click(function (e) {
         e.preventDefault();
-        dataslide = $(this).attr('data-slide');
+        dataslide = parseInt($(this).attr('data-slide'));
         goToByScroll(dataslide);
         $(".nav-collapse").collapse('hide');
     });
@@ -279,58 +267,3 @@ jQuery(document).ready(function ($) {
     );
 });
 
-/******************
- * = Arrows click  *
- ******************/
-jQuery(document).ready(function ($) {
-    //Cache some variables
-    var arrows = $('#arrows div');
-
-    arrows.click(function (e) {
-        e.preventDefault();
-
-        if ($(this).hasClass('disabled'))
-            return;
-
-        var slide = null;
-        var datasheet = $('.nav > li.active').data('slide');
-        var offset_top = false;
-        var offset_left = false;
-
-
-        switch ($(this).attr('id')) {
-            case 'arrow-up':
-                offset_top = ( datasheet - 1 == 1 ) ? '0px' : $('.slide[data-slide="' + (datasheet - 1) + '"]').offset().top;
-                break;
-            case 'arrow-down':
-                offset_top = $('.slide[data-slide="' + (datasheet + 1) + '"]').offset().top;
-                break;
-            case 'arrow-left':
-                offset_left = $('#slide-3 .row').offset().left + 452;
-                if (offset_left > 0) {
-                    offset_left = '0px';
-                }
-                break;
-            case 'arrow-right':
-                offset_left = $('#slide-3 .row').offset().left - 452;
-                if (offset_left < $('body').width() - $('#slide-3 .row').width()) {
-                    offset_left = $('body').width() - $('#slide-3 .row').width();
-                }
-                break;
-        }
-
-        if (offset_top != false) {
-            htmlbody.stop(false, false).animate({
-                scrollTop: offset_top
-            }, 1500, 'easeInOutQuart');
-        }
-
-        if (offset_left != false) {
-            if ($('#slide-3 .row').width() != $('body').width()) {
-                $('#slide-3 .row').stop(false, false).animate({
-                    left: offset_left
-                }, 1500, 'easeInOutQuart');
-            }
-        }
-    });
-});
