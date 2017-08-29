@@ -1,15 +1,60 @@
-.home-integrations-waterfall {
+.waterfall-kiwi {
+    text-align: left;
+    top: 4px;
+    left: -250px;
     position: relative;
-    animation-name: example;
-    animation-duration: 5s;
+    animation-name: side-movement-kiwi;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
 }
-@keyframes example {
-    0%   {left:-400px; top:0px;}
-    /*25%  {left:10px; top:0px;}*/
-    /*50%  {left:20px; top:0px;}*/
-    /*75%  {left:30px; top:0px;}*/
-    100% {left:320%; top:0px;}
+@keyframes side-movement-kiwi {
+    0%   {left:-150px; top:4px;}
+    100% {left: 110%; top:4px}
+}
 
-    110% {left: -10px}
+.waterfall-uniandes {
+    text-align: left;
+    left: -250px;
+    position: relative;
+    animation-name: side-movement-uniandes;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+@keyframes side-movement-uniandes {
+    0%   {left:-150px; top:100px;}
+    15% {left:-150px; top:100px;}
+    100% {left: 110%; top:100px}
+}
+
+.waterfall-tennis {
+    text-align: left;
+    left: -250px;
+    position: relative;
+    animation-name: side-movement-tennis;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+@keyframes side-movement-tennis {
+    0%   {left:-150px; top:200px;}
+    15% {left:-150px; top:100px;}
+    100% {left: 110%; top:100px}
+}
+
+#slide-1 {
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: black;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    background-position: center center;
 }

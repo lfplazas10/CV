@@ -1,5 +1,13 @@
 $(document).ready(function (e) {
-    console.log(e)
+
+    // NEW FUNCTIONS
+
+    $('#kiwi-image').click(function () {
+        console.log('aqui')
+    })
+
+    // /NEW FUNCTIONS
+
     $('.with-hover-text, .regular-link').click(function (e) {
         e.stopPropagation();
     });
