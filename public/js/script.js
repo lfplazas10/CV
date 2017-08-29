@@ -167,33 +167,12 @@ jQuery(document).ready(function ($) {
         $(".nav-collapse").collapse('hide');
     });
 
-    $('#kiwi-image').click(function (e) {
+    $('.img-pointer').click(function(e){
         e.preventDefault();
-        dataslide = parseInt(4);
+        dataslide = parseInt($(this).attr('data-slide'));
         goToByScroll(dataslide);
         $(".nav-collapse").collapse('hide');
-    })
-
-    $('#uniandes-image').click(function (e) {
-        e.preventDefault();
-        dataslide = parseInt(2);
-        goToByScroll(dataslide);
-        $(".nav-collapse").collapse('hide');
-    })
-
-    $('#tennis-image').click(function (e) {
-        e.preventDefault();
-        dataslide = parseInt(2);
-        goToByScroll(dataslide);
-        $(".nav-collapse").collapse('hide');
-    })
-
-    $('#java-image').click(function (e) {
-        e.preventDefault();
-        dataslide = parseInt(4);
-        goToByScroll(dataslide);
-        $(".nav-collapse").collapse('hide');
-    })
+    });
 
     //When the user clicks on the navigation links, get the data-slide attribute value of the link and pass that variable to the goToByScroll function
     $('.navigation-slide').click(function (e) {

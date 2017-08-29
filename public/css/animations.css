@@ -1,6 +1,7 @@
 body{
     /*overflow: hidden;*/
 }
+/*Waterfall efect for single ball*/
 .waterfall {
     text-align: left;
     top: 5px;
@@ -23,11 +24,13 @@ body{
         top: 5px
     }
 }
+/*End*/
 
+/*Waterfall effect for 2 balls on the same line*/
 .waterfall-same-line {
     float: left;
     padding: 10px;
-    top: 5px;
+    /*top: 5px;*/
     position: relative;
     animation-name: side-movement-line;
     animation-duration: 25s;
@@ -38,11 +41,11 @@ body{
 @keyframes side-movement-line {
     0% {
         left: -160px;
-        top: 5px;
+        top: 1px;
     }
     100% {
         left: 110%;
-        top: 5px
+        top: 1px
     }
 }
 
@@ -67,7 +70,50 @@ body{
         top: 5px
     }
 }
+/*END*/
+.waterfall-same-line-3 {
+    float: left;
+    padding: 10px;
+    top: 5px;
+    position: relative;
+    animation-name: side-movement-line-3;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
 
+@keyframes side-movement-line-3 {
+    0% {
+        left: -520px;
+        top: 5px;
+    }
+    100% {
+        left: 110%;
+        top: 5px
+    }
+}
+
+.waterfall-same-line-4 {
+    float: left;
+    padding: 10px;
+    top: 5px;
+    position: relative;
+    animation-name: side-movement-line-4;
+    animation-duration: 29s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes side-movement-line-4 {
+    0% {
+        left: -740px;
+        top: 5px;
+    }
+    100% {
+        left: 110%;
+        top: 5px
+    }
+}
 .img-pointer {
     cursor: pointer;
 }
