@@ -163,6 +163,10 @@ body{
     font-family: opensans-bold;
     src: url(OpenSans-Bold-webfont.ttf);
 }
+@font-face {
+    font-family: opensans;
+    src: url(OpenSans-Regular-webfont.ttf);
+}
 
 /* ------------------------------------------------------------------ */
 /* d. Resume Section
@@ -188,7 +192,7 @@ body{
     padding-bottom: 6px;
 }
 #resume h3 {
-    font: 25px/30px 'opensans-bold', sans-serif;
+    font: 35px/40px 'opensans-bold', sans-serif;
 }
 
 #resume .header-col { padding-top: 9px; }
@@ -212,4 +216,9 @@ body{
 #resume .date {
     font: 15px/24px 'opensans-regular', sans-serif;
     margin-top: 6px;
+}
+#map {
+    z-index: 324323242;
+    height: 400px;
+    width: 100%;
 }

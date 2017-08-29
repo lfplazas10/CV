@@ -1,8 +1,9 @@
 $(document).ready(function (e) {
 
-    // NEW FUNCTIONS
-
-    // /NEW FUNCTIONS
+    $('#kiwi-url').click(function () {
+       console.log('f');
+       window.open('https://order.kiwicampus.com/', '_blank');
+    });
 
     $('.with-hover-text, .regular-link').click(function (e) {
         e.stopPropagation();
