@@ -1,4 +1,4 @@
-.waterfall-kiwi {  text-align: left;
+.waterfall {  text-align: left;
     top: 5px;
     left: -250px;
     position: relative;
@@ -17,58 +17,10 @@
     cursor: pointer;
 }
 
-.waterfall-uniandes {
-    text-align: left;
-    left: -250px;
-    top: 8px;
-    position: relative;
-    animation-name: side-movement-uniandes;
-    animation-duration: 25s;
-    animation-delay: 15s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-@keyframes side-movement-uniandes {
-    0%   {left:-150px; top:30px;}
-    100% {left: 110%; top:30px}
-}
-
-.waterfall-tennis {
-    text-align: left;
-    left: -250px;
-    top: 8px;
-    position: relative;
-    animation-name: side-movement-tennis;
-    animation-duration: 25s;
-    animation-delay: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-@keyframes side-movement-tennis {
-    0%   {left:-150px; top:30px;}
-    100% {left: 110%; top:30px}
-}
-
-.waterfall-java {
-    text-align: left;
-    left: -250px;
-    top: 8px;
-    position: relative;
-    animation-name: side-movement-java;
-    animation-duration: 25s;
-    animation-delay: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-@keyframes side-movement-java {
-    0%   {left:-150px; top:30px;}
-    100% {left: 110%; top:30px}
-}
-
 #slide-1 {
-    background: #ECE9E6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     color: black;
     -webkit-background-size: 100%;
@@ -82,4 +34,19 @@
     background-size: cover;
     width: 100%;
     background-position: center center;
+}
+
+#mainInfoContainer{
+    width: 100%;
+    position: absolute;
+    top: 185px;
+    left: 50%;
+    text-align: center;
+}
+
+.mainDivBackground{
+    background-color: rgba(255,255,255, 0.4);
+    border-style: solid;
+    border-radius: 5px;
+    padding-top: 0px
 }
