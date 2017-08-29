@@ -423,9 +423,9 @@ body {
 }
 
 #slide-4 {
-	background: #E0EAFC;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);
-	background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+	background: #FFFFFF;  /* fallback for old browsers */
+	/*background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);*/
+	/*background: linear-gradient(to right, #CFDEF3, #E0EAFC);*/
 
 	color: black;
 	padding-top: 90px;
