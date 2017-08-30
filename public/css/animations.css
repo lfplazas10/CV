@@ -218,7 +218,7 @@ body{
     margin-top: 6px;
 }
 #map {
-    z-index: 324323242;
+    /*z-index: 324323242;*/
     height: 400px;
     width: 100%;
 }
