@@ -114,7 +114,7 @@ MongoClient.connect("mongodb://admin:AdminAdmin@ds139954.mlab.com:39954/datosdep
     });
 
     router.get('*', (req, res) => {
-      res.sendFile(path.join(__dirname+'../client/build/index.html'));
+      res.sendFile(path.join('../client/build/index.html'));
     });
   }
 });
