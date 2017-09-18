@@ -3,6 +3,7 @@ import '../App.css';
 import '../CSS/Table.css';
 import '../CSS/stars.css';
 import axios from 'axios';
+import swal from 'sweetalert2'
 
 class PlayerStatsView extends React.Component {
   state = {users: [], voted:false, statistics : {}}
@@ -14,18 +15,20 @@ class PlayerStatsView extends React.Component {
     var upperClass = this;
     axios.get('/players/' + this.props.params.name.split(' ')[1] + ' ' + this.props.params.name.split(' ')[0].charAt(0) + '.' + '/statistics')
       .then(function (response) {
-        console.log(response.data)
         upperClass.state.statistics = response.data;
         upperClass.forceUpdate();
       })
       .catch(function (error) {
-        console.log(error);
       });
   }
 
   handleSelectOption(e){
     if (this.state.voted === true){
-      console.log('Sorry, you already voted');
+      swal(
+        'Oops...',
+        'You already voted!',
+        'error'
+      )
     }
     else{
       var rate = {
