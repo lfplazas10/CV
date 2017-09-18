@@ -113,6 +113,11 @@ MongoClient.connect("mongodb://admin:AdminAdmin@ds139954.mlab.com:39954/datosdep
       );
     });
 
+    router.get('/personal', function (req, res) {
+      res.render('index', {title: 'Express'});
+    });
+
+
     router.get('*', function (req, res) {
       res.sendFile(path.join(__dirname+'/client/build/index.html'));
     });
