@@ -11,6 +11,8 @@ MongoClient.connect("mongodb://admin:AdminAdmin@ds139954.mlab.com:39954/datosdep
     //   res.render('index', {title: 'Express'});
     // });
 
+    router.use(express.static(path.join(__dirname, 'client/build')));
+    
     router.get('/players', function (req, res) {
       var col = db.collection('Players');
       col.find({}).toArray(function (mongoError, ej) {
