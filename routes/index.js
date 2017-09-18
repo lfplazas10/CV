@@ -6,9 +6,9 @@ MongoClient.connect("mongodb://admin:AdminAdmin@ds139954.mlab.com:39954/datosdep
   if (!err) {
     console.log("We are connected");
 
-    router.get('/', function (req, res, next) {
-      res.render('index', {title: 'Express'});
-    });
+    // router.get('/', function (req, res, next) {
+    //   res.render('index', {title: 'Express'});
+    // });
 
     router.get('/players', function (req, res) {
       var col = db.collection('Players');
@@ -108,6 +108,10 @@ MongoClient.connect("mongodb://admin:AdminAdmin@ds139954.mlab.com:39954/datosdep
         }
 
       );
+    });
+
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname+'/client/build/index.html'));
     });
   }
 });
