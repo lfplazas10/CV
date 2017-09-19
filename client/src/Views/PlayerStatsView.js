@@ -3,10 +3,35 @@ import '../App.css';
 import '../CSS/Table.css';
 import '../CSS/stars.css';
 import axios from 'axios';
-import swal from 'sweetalert2'
+import SweetAlert from 'react-bootstrap-sweetalert';
+
+class ScoreCard extends React.Component {
+  state = {player: true};
+  componentDidMount(){
+    var upperClass = this;
+    console.log(upperClass)
+    axios.get('/players/' + upperClass.props.name)
+      .then(function (response) {
+        console.log(response.data);
+        upperClass.state.player = response.data;
+        upperClass.forceUpdate();
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+  render (){
+    return (
+      <div>
+        <h5>Number of votes:</h5>{this.state.player.numRatings}
+        <h5>Score:</h5>{this.state.player.score}
+      </div>
+    );
+  }
+}
 
 class PlayerStatsView extends React.Component {
-  state = {users: [], voted:false, statistics : {}}
+  state = {users: [], voted:false, statistics : {}, confirmAlert:null, errorAlert:null}
 
   componentDidMount() {
     fetch('/players/' + this.props.params.name.split(' ')[1] + ' ' + this.props.params.name.split(' ')[0].charAt(0) + '.' + '/Results')
@@ -15,29 +40,34 @@ class PlayerStatsView extends React.Component {
     var upperClass = this;
     axios.get('/players/' + this.props.params.name.split(' ')[1] + ' ' + this.props.params.name.split(' ')[0].charAt(0) + '.' + '/statistics')
       .then(function (response) {
+        console.log(response.data)
         upperClass.state.statistics = response.data;
         upperClass.forceUpdate();
       })
       .catch(function (error) {
+        console.log(error);
       });
   }
 
   handleSelectOption(e){
+    console.log("JOJO")
     if (this.state.voted === true){
-      swal(
-        'Oops...',
-        'You already voted!',
-        'error'
-      )
+      this.setState({
+        errorAlert: null
+      });
+      this.forceUpdate();
+      console.log('Sorry, you already voted');
     }
     else{
       var rate = {
         score: e.target.value,
         name:this.props.params.name
       }
+      var upperClass = this;
       axios.post('/rate', rate)
         .then(function (response) {
-
+          upperClass.state.confirmAlert = true;
+          upperClass.forceUpdate();
         })
         .catch(function (error) {
           console.log(error);
@@ -46,10 +76,19 @@ class PlayerStatsView extends React.Component {
     }
   }
 
+  hideAlertSend() {
+    console.log('Hiding alert...');
+    this.setState({
+      confirmAlert: null
+    });
+    this.forceUpdate();
+  }
+
   render() {
     return (
 
       <div className="App">
+         { this.state.confirmAlert ? <SweetAlert title="Vote recorded!" onConfirm={() => this.hideAlertSend()} /> : null }
         <section id="playerCardSection">
           <div className="container py-3">
             <div className="card">
@@ -72,22 +111,27 @@ class PlayerStatsView extends React.Component {
                   <br/>
                   <div className="row">
                       <div className="col-md-3 px-1">
+                      { this.state.voted == false ? 
                       <h5 style={{marginTop : 12+'px'}}>Rate this player:</h5>
+                      : null } 
                       </div>
-                    <div className="col-md-5 px-1">
-                     <fieldset className="rating" onChange={this.handleSelectOption.bind(this)}>
-                      <input type="radio" id="star5" name="rating" value="5" /><label className = "full" htmlFor="star5" title="Awesome - 5 stars"></label>
-                      <input type="radio" id="star4half" name="rating" value="4.5" /><label className="half" htmlFor="star4half" title="Pretty good - 4.5 stars"></label>
-                      <input type="radio" id="star4" name="rating" value="4" /><label className = "full" htmlFor="star4" title="Pretty good - 4 stars"></label>
-                      <input type="radio" id="star3half" name="rating" value="3.5" /><label className="half" htmlFor="star3half" title="Meh - 3.5 stars"></label>
-                      <input type="radio" id="star3" name="rating" value="3" /><label className = "full" htmlFor="star3" title="Meh - 3 stars"></label>
-                      <input type="radio" id="star2half" name="rating" value="2.5" /><label className="half" htmlFor="star2half" title="Kinda bad - 2.5 stars"></label>
-                      <input type="radio" id="star2" name="rating" value="2" /><label className = "full" htmlFor="star2" title="Kinda bad - 2 stars"></label>
-                      <input type="radio" id="star1half" name="rating" value="1.5" /><label className="half" htmlFor="star1half" title="Meh - 1.5 stars"></label>
-                      <input type="radio" id="star1" name="rating" value="1" /><label className = "full" htmlFor="star1" title="Sucks big time - 1 star"></label>
-                      <input type="radio" id="starhalf" name="rating" value="half" /><label className="half" htmlFor="starhalf" title="Sucks big time - 0.5 stars"></label>
-                      </fieldset>
-                    </div>                
+                    { this.state.voted == false ? 
+                      <div className="col-md-5 px-1">
+                       <fieldset className="rating" onChange={this.handleSelectOption.bind(this)}>
+                        <input type="radio" id="star5" name="rating" value="5" /><label className = "full" htmlFor="star5" title="Awesome - 5 stars"></label>
+                        <input type="radio" id="star4half" name="rating" value="4.5" /><label className="half" htmlFor="star4half" title="Pretty good - 4.5 stars"></label>
+                        <input type="radio" id="star4" name="rating" value="4" /><label className = "full" htmlFor="star4" title="Pretty good - 4 stars"></label>
+                        <input type="radio" id="star3half" name="rating" value="3.5" /><label className="half" htmlFor="star3half" title="Meh - 3.5 stars"></label>
+                        <input type="radio" id="star3" name="rating" value="3" /><label className = "full" htmlFor="star3" title="Meh - 3 stars"></label>
+                        <input type="radio" id="star2half" name="rating" value="2.5" /><label className="half" htmlFor="star2half" title="Kinda bad - 2.5 stars"></label>
+                        <input type="radio" id="star2" name="rating" value="2" /><label className = "full" htmlFor="star2" title="Kinda bad - 2 stars"></label>
+                        <input type="radio" id="star1half" name="rating" value="1.5" /><label className="half" htmlFor="star1half" title="Meh - 1.5 stars"></label>
+                        <input type="radio" id="star1" name="rating" value="1" /><label className = "full" htmlFor="star1" title="Sucks big time - 1 star"></label>
+                        <input type="radio" id="starhalf" name="rating" value="0.5" /><label className="half" htmlFor="starhalf" title="Sucks big time - 0.5 stars"></label>
+                        </fieldset>
+                      </div>  
+                      : null }  
+                      { this.state.voted == true ? <ScoreCard name={this.props.params.name}/> : null }            
                 </div>
               </div>
             </div>

@@ -21,6 +21,15 @@ MongoClient.connect("mongodb://admin:AdminAdmin@ds139954.mlab.com:39954/datosdep
       );
     });
 
+    router.get('/players/:name', function (req, res) {
+      var col = db.collection('Players');
+      col.findOne({"name" :req.params.name}).then(function (player) {
+        player.score = player.score.toFixed(2);
+          res.send(player);
+        }
+      );
+    });
+    
     router.post('/rate', function (req, res) {
       var body = req.body;
       var col = db.collection('Players');

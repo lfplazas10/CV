@@ -7,12 +7,12 @@
     "axios": "^0.16.2",
     "materialize-css": "^0.100.2",
     "react": "^15.6.1",
+    "react-bootstrap-sweetalert": "^4.0.0",
     "react-dom": "^15.6.1",
     "react-infinite": "^0.12.1",
     "react-list": "^0.8.7",
     "react-router": "^2.0.1",
-    "react-scripts": "1.0.13",
-    "sweetalert2": "^6.9.0"
+    "react-scripts": "1.0.13"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,5 +20,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:3001"
 }
