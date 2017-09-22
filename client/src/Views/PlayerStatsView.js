@@ -4,31 +4,7 @@ import '../CSS/Table.css';
 import '../CSS/stars.css';
 import axios from 'axios';
 import SweetAlert from 'react-bootstrap-sweetalert';
-
-class ScoreCard extends React.Component {
-  state = {player: true};
-  componentDidMount(){
-    var upperClass = this;
-    console.log(upperClass)
-    axios.get('/players/' + upperClass.props.name)
-      .then(function (response) {
-        console.log(response.data);
-        upperClass.state.player = response.data;
-        upperClass.forceUpdate();
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
-  render (){
-    return (
-      <div>
-        <h5>Number of votes:</h5>{this.state.player.numRatings}
-        <h5>Score:</h5>{this.state.player.score}
-      </div>
-    );
-  }
-}
+import ScoreCard from './ScoreCard.js'
 
 class PlayerStatsView extends React.Component {
   state = {users: [], voted:false, statistics : {}, confirmAlert:null, errorAlert:null}

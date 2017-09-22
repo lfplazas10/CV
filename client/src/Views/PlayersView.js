@@ -4,10 +4,14 @@ import '../PlayerStats.css';
 import SearchPlayer from './SearchPlayer.js'
 import AddPlayers from './AddPlayers.js'
 
-
-
 class PlayersView extends React.Component {
-  state = {users: []}
+
+  constructor (props){
+    super(props);
+    this.state = {
+      users:[]
+    }
+  }
 
   componentDidMount() {
     fetch('/players')
@@ -19,7 +23,6 @@ class PlayersView extends React.Component {
     console.log(this.state.users)
     return (
       <div>
-
         <div className="App">
           <header className="jumbotron my-4" style={{marginBottom: 5 + 'px', paddingBottom: 5 + 'px'}}>
             <h1 className="display-3">TenniStats</h1>
@@ -38,7 +41,6 @@ class PlayersView extends React.Component {
           </div>
         </div>
       </div>
-
     );
   }
 }
