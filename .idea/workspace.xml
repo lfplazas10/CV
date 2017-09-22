@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c944a99a-8fc9-4a65-867a-a0dcf4901962" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/App.js" afterPath="$PROJECT_DIR$/client/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/Views/PlayerStatsView.js" afterPath="$PROJECT_DIR$/client/src/Views/PlayerStatsView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/Views/PlayersView.js" afterPath="$PROJECT_DIR$/client/src/Views/PlayersView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/Views/SearchPlayer.js" afterPath="$PROJECT_DIR$/client/src/Views/SearchPlayer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/public/index.html" afterPath="$PROJECT_DIR$/client/public/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchPlayer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchPlayer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/Views/SearchPlayer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1166">
@@ -36,6 +32,16 @@
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="62" column="74" lean-forward="false" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,6 +119,7 @@
         <option value="$PROJECT_DIR$/client/src/Views/PlayerStatsView.js" />
         <option value="$PROJECT_DIR$/client/src/Views/ScoreCard.js" />
         <option value="$PROJECT_DIR$/client/src/Views/SearchPlayer.js" />
+        <option value="$PROJECT_DIR$/client/public/index.html" />
       </list>
     </option>
   </component>
@@ -169,6 +176,12 @@
               <item name="personal_page" type="b2602c69:ProjectViewProjectNode" />
               <item name="personal_page" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="personal_page" type="b2602c69:ProjectViewProjectNode" />
+              <item name="personal_page" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="personal_page" type="b2602c69:ProjectViewProjectNode" />
@@ -344,12 +357,12 @@
       <workItem from="1505706007929" duration="1010000" />
       <workItem from="1505707634792" duration="322000" />
       <workItem from="1505999071584" duration="801000" />
-      <workItem from="1506103101418" duration="417000" />
+      <workItem from="1506103101418" duration="592000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51596000" />
+    <option name="totallyTimeSpent" value="51771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1273" height="773" extended-state="0" />
@@ -391,13 +404,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/css/animations.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -765,6 +771,14 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="62" column="74" lean-forward="false" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
