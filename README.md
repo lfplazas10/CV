@@ -1,6 +1,6 @@
 # Personal page
 
-This project can be seen live at: [http://luisplazas.co/]
+This project can be seen live at: [http://luisplazas.co/personal]
 
 ## Credits
 
